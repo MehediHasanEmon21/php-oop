@@ -1,27 +1,20 @@
 <?php
 
-class Calculation{
+class Person{
 
-	public $a,$b,$c;
+	public $name,$age;
 
-	public function sum(){
-
-		return $this->c = $this->a + $this->b;
-
+	public function __construct($n,$a){
+		$this->name = $n;
+		$this->age = $a;
 	}
 
-	public function sub(){
-
-		return $this->c = $this->a - $this->b;
-
+	public function show(){
+		echo "My name is ".$this->name."."."My age is ".$this->age;
 	}
 
 }
 
-$c = new Calculation();
+$p1 = new Person("Emon",20);
+$p1->show();
 
-$c->a = 10;
-$c->b = 5;
-
-echo "sum is :".$c->sum()."<br>";
-echo "sub is :".$c->sub()."<br>";
